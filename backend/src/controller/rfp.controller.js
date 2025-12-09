@@ -50,7 +50,7 @@ const generateRFP = async (req, res) => {
 
     const { user_input, __v, ...cleanRFP } = newRFP._doc;
 
-    res.status(200).json({ success: true, rfp: cleanRFP });
+    res.status(200).json({ message: "RFP generated successfully", rfp: cleanRFP });
   } catch (error) {
     console.error("Error:", error);
     res.status(500).json({ error: "Internal Server Error" });
@@ -64,7 +64,7 @@ const getRFPs = async (req, res) => {
         "_id title description budget deadline items payment_terms warranty_requirement notes recommended_proposal_id recommended_vendor_id award_reason created_at"
       )
       .sort({ created_at: -1 });
-    res.status(200).json({ success: true, rfps });
+    res.status(200).json({ message: "RFP fetched successfully", rfps });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Failed to fetch RFPs" });

@@ -20,10 +20,7 @@ const createVendor = async (req, res) => {
       contact_name,
     });
 
-    return res.status(201).json({
-      message: "Vendor created successfully",
-      vendor
-    });
+    return res.status(201).json(vendor);
   } catch (error) {
     console.error("Create vendor error:", error);
     return res.status(500).json({
@@ -42,7 +39,7 @@ const getVendors = async (req, res) => {
   }
 };
 
-export const getVendorById = async (req, res) => {
+const getVendorById = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -65,8 +62,61 @@ export const getVendorById = async (req, res) => {
   }
 };
 
+const updateVendor = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { name, email, company, phone, contact_name } = req.body;
+
+    if (!id) {
+      throw new Error("Vendor ID is required");
+    }
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      throw new Error("Invalid vendor ID");
+    }
+
+    const updatedVendor = await Vendor.findByIdAndUpdate(
+      id,
+      {
+        name: name.trim(),
+        email: email.toLowerCase().trim(),
+        company,
+        phone,
+        contact_name,
+      },
+      { new: true }
+    );
+
+    return res.status(200).json(updatedVendor);
+  } catch (error) {
+    console.error("Update vendor error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+const deleteVendor = async (req, res) => {
+  try {
+    const { id } = req.params;
+    if (!id) {
+      throw new Error("Vendor ID is required");
+    }
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      throw new Error("Invalid vendor ID");
+    }
+
+    const deletedVendor = await Vendor.findByIdAndDelete(id);
+
+    return res.status(200).json({ message: "Vendor deleted successfully" });
+  } catch (error) {
+    console.error("Delete vendor error:", error.message);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+};
+
 export default {
   createVendor,
   getVendors,
   getVendorById,
+  deleteVendor,
+  updateVendor,
 };

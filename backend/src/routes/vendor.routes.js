@@ -9,5 +9,7 @@ const router = express.Router();
 router.post("", createVendorValidator, validateRequest, vendorController.createVendor);
 router.get("", vendorController.getVendors);
 router.get("/:id", vendorController.getVendorById);
+router.delete("/:id", vendorController.deleteVendor);
+router.put("/:id", createVendorValidator, validateRequest, vendorController.updateVendor);
 
 export default router;

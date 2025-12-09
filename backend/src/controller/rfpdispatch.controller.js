@@ -10,7 +10,7 @@ const sendRfpToVendors = async (req, res) => {
     const { rfpId, vendorIds } = req.body;
 
     if (!rfpId || !Array.isArray(vendorIds) || vendorIds.length === 0) {
-      throw new Error("rfpId and vendorIds array are required");
+      throw new Error("RFP Id and vendorIds array are required");
     }
 
     if (!mongoose.Types.ObjectId.isValid(rfpId)) {
@@ -61,7 +61,7 @@ const sendRfpToVendors = async (req, res) => {
     });
   } catch (error) {
     console.error(error.message);
-    res.status(500).json({ error: "Internal server error from rfp" });
+    res.status(500).json({ error: "Internal server error" });
   }
 };
 
