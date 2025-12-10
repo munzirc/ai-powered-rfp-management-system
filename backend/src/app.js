@@ -12,7 +12,7 @@ import proposalRouter from "./routes/proposal.routes.js"
 const app = express();
 
 app.use(cors({
-  origin: process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : "*",
+  origin: process.env.ALLOWED_ORIGIN,
 }));
 app.use(helmet());
 app.use(express.json());
