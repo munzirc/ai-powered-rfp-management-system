@@ -16,10 +16,10 @@ Make sure you have the following installed and configured:
   - Local MongoDB instance or MongoDB Atlas
 
 - **Email Account (Gmail recommended)**:
-  The system requires a Gmail account to send and receive emails:
+  * The system requires a Gmail account to send and receive emails:
   - IMAP: For receiving vendor proposal emails
   - Sending Emails: Handled via Nodemailer Gmail service (no manual SMTP setup required)
-  Note:
+  * Note:
   - If using Gmail with 2FA, generate an App Password for Nodemailer.
 
 - **Ollama AI**:
