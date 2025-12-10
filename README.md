@@ -74,8 +74,6 @@ npm install
 
   ```
 
-> For Gmail, enable IMAP and generate an **App Password**.
-
 - Create a `.env` file inside the **frontend** folder and add the following:
 
   ```env
