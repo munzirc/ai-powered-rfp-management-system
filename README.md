@@ -140,10 +140,12 @@ npm run dev
 
 ### Key Libraries
 
-- Mongoose
-- Nodemailer
-- Mailparser
+- mongoose
+- nodemailer
+- mailparser
 - pdf-parser
+- ollama
+- node-imap
 
 ---
 
