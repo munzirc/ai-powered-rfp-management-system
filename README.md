@@ -2,6 +2,9 @@
 
 This project is an **AI-powered RFP management system** that automates the handling of procurement requests and vendor proposals. Users can write their requirements in plain language, and the system converts them into a structured RFP that can be sent to vendors via email. Vendor proposals are received through email, including attachments. AI extracts structured information from these responses and compares them with the original RFP, reducing manual review and providing clear recommendations for vendor selection.
 
+[Live Demo](https://ai-powered-rfp-management-system-six.vercel.app/)
+
+
 ---
 
 ## 1. Project Setup
