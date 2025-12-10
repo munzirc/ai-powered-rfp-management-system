@@ -117,12 +117,10 @@ npm run dev
 
 - Node.js
 - Express.js
-- Javascript
 
 ### Database
 
 - MongoDB
-- Mongoose
 
 ### AI Provider
 
