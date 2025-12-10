@@ -4,7 +4,7 @@ const useStore = create((set) => ({
   // state
   rfps: [],
   selectedRfp: null,
-  tab: "rfps",
+  tab: "chat",
 
   // actions
   setRfps: (rfps) => set({ rfps }),
