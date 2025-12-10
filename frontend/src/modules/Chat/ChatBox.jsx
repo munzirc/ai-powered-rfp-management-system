@@ -25,7 +25,7 @@ const ChatBox = () => {
       toast.success("RFP generated successfully!");
       setValue("");
     } catch (error) {
-      toast.error("Failed to generate RFP");
+      toast.error("Unable to process your request. Please try again.");
     }
   };
 

@@ -407,11 +407,10 @@ npm run dev
 ### Key Design Decisions
 
 - User requirements are converted into a structured RFP, and only this structured data is used for proposal comparison.
-- Proposal emails are stored in raw form for reference, while AI operates on extracted structured fields.
-- Proposal evaluation is AI-based rather than rule-based to handle different vendor formats and writing styles.
-- Each proposal is evaluated independently and stores its own AI-generated score and summary.
-- The final vendor recommendation is generated on the backend to keep the decision logic centralized.
-- Email processing, AI extraction, and proposal evaluation are handled as separate steps to keep the system simple and maintainable.
+- Proposal emails are stored in raw form for reference, while AI works on extracted structured fields to generate proposal scores, summaries, and verdicts.
+- For each RFP, all associated proposals are sent to AI for evaluation. AI returns an updated version of each proposal with its score, summary, and verdict.
+- The backend calculates the winning proposal based on the AI-generated scores.
+- Email processing, AI extraction, and proposal evaluation are handled as separate steps to keep the system clear and maintainable.
 
 ---
 
@@ -434,15 +433,20 @@ npm run dev
 
 ### How They Were Used
 
-- Writing initial boilerplate code
-- Designing data models and APIs
-- Debugging email and IMAP issues
-- Improving AI prompts for structured output
+- Writing initial boilerplate code for backend and frontend.
+- Designing data models and APIs.
+- Implementing frontend components, forms, and UI flows.
+- Debugging both backend and frontend errors.
+- Improving AI prompts for structured output.
+- Integrating frontend with backend APIs and handling real-time data updates.
+- Creating reusable frontend components and state management logic.
 
 ### Learnings
 
-- AI performs better with clear structure and constraints.
-- AI outputs should always be validated.
-- Combining AI with backend logic improves reliability and control.
+- AI sped up coding by generating boilerplate and repetitive code.
+- Helped quickly prototype data models, APIs, and frontend components.
+- Provided guidance on project structure, design patterns, and best practices.
+- Assisted in debugging complex logic like email parsing and AI output handling.
+- Highlighted the need to validate AI-generated outputs for consistency.
 
 ---
