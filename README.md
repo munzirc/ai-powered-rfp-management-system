@@ -159,7 +159,7 @@ npm run dev
 
 ```json
 {
-  "requirements": "Our company is planning to upgrade our office IT infrastructure. We need: 20 laptops with at least 16GB RAM, 512GB SSD, i7 processors.15 24-inch monitors.3 network printers with scanning and duplex printing.2 routers and 5 wireless access points.Delivery and installation should be completed within 30 days.Vendors must provide a minimum 1-year warranty for all hardware.Payment terms: Net 30, with 20% advance payment.Please include setup and post-installation support.Estimated budget: $60,000 USD."
+  "text": "Our company is planning to upgrade our office IT infrastructure. We need: 20 laptops with at least 16GB RAM, 512GB SSD, i7 processors.15 24-inch monitors.3 network printers with scanning and duplex printing.2 routers and 5 wireless access points.Delivery and installation should be completed within 30 days.Vendors must provide a minimum 1-year warranty for all hardware.Payment terms: Net 30, with 20% advance payment.Please include setup and post-installation support.Estimated budget: $60,000 USD."
 }
 ```
 
