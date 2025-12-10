@@ -82,7 +82,7 @@ const ProposalModal = ({ proposal, onClose }) => {
                       {item.name}
                     </p>
                     <p className="text-sm text-white/70">
-                      {item.quantity} × ${item.unit_price}
+                      {item.quantity} × {extracted_data.currency+" "+item.unit_price}
                     </p>
                   </div>
                   {item.specifications && (

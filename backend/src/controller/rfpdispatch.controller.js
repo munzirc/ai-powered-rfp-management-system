@@ -57,7 +57,7 @@ const sendRfpToVendors = async (req, res) => {
 
 
     return res.status(200).json({
-      message: "RFP emails processed",
+      message: "RFP sent successfully",
     });
   } catch (error) {
     console.error(error.message);

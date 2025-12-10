@@ -53,7 +53,7 @@ const generateRFP = async (req, res) => {
     res.status(200).json({ message: "RFP generated successfully", rfp: cleanRFP });
   } catch (error) {
     console.error("Error:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ error: "Unable to process requirements" });
   }
 };
 
