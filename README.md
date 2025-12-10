@@ -1,6 +1,6 @@
 # AI-Powered RFP Management System
 
-This project is an **AI-powered RFP management system** that automates how procurement requests and vendor proposals are handled. Users can write their requirements in simple language, and the system converts them into a **structured RFP** and sends it to vendors via email. Vendor proposals are received through email, including attachments. The system uses AI to extract structured information from these responses and compare them with the original RFP. This helps reduce manual review and provides a clear recommendation on which vendor to choose.
+This project is an **AI-powered RFP management system** that automates the handling of procurement requests and vendor proposals. Users can write their requirements in plain language, and the system converts them into a structured RFP that can be sent to vendors via email. Vendor proposals are received through email, including attachments. AI extracts structured information from these responses and compares them with the original RFP, reducing manual review and providing clear recommendations for vendor selection.
 
 ---
 
@@ -16,9 +16,11 @@ Make sure you have the following installed and configured:
   - Local MongoDB instance or MongoDB Atlas
 
 - **Email Account (Gmail recommended)**:
-
-  - IMAP access for receiving proposal emails
-  - SMTP access for sending RFP emails
+  The system requires a Gmail account to send and receive emails:
+  - IMAP: For receiving vendor proposal emails
+  - Sending Emails: Handled via Nodemailer Gmail service (no manual SMTP setup required)
+  Note:
+  - If using Gmail with 2FA, generate an App Password for Nodemailer.
 
 - **Ollama AI**:
   - Local or hosted Ollama instance
