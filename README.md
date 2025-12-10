@@ -17,10 +17,10 @@ Make sure you have the following installed and configured:
 
 - **Email Account (Gmail recommended)**:
   * The system requires a Gmail account to send and receive emails:
-  - IMAP: For receiving vendor proposal emails
-  - Sending Emails: Handled via Nodemailer Gmail service (no manual SMTP setup required)
+    - IMAP: For receiving vendor proposal emails
+    - Sending Emails: Handled via Nodemailer Gmail service (no manual SMTP setup required)
   * Note:
-  - If using Gmail with 2FA, generate an App Password for Nodemailer.
+    - If using Gmail with 2FA, generate an App Password for Nodemailer.
 
 - **Ollama AI**:
   - Local or hosted Ollama instance
